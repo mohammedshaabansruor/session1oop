@@ -10,14 +10,76 @@
         Saturday,
         Sunday
     }
+    enum Season
+    {
+        Spring,
+        Summer,
+        Autumn,
+        Winter
+    }
+    enum Colors
+    {
+        Red,
+        Green,
+        Blue
+    }
     internal class Program
     {
         static void Main(string[] args)
         {
-            foreach (WeekDays day in Enum.GetValues(typeof(WeekDays)))
+            #region q1
+            //foreach (WeekDays day in Enum.GetValues(typeof(WeekDays)))
+            //{
+            //    Console.WriteLine(day);
+            //}
+            #endregion
+            #region Q2
+            //Console.Write("Enter a season (Spring, Summer, Autumn, Winter): ");
+            //string input = Console.ReadLine();
+
+            //if (Enum.TryParse(input, true, out Season season))
+            //{
+
+            //    switch (season)
+            //    {
+            //        case Season.Spring:
+            //            Console.WriteLine("Spring: March to May");
+            //            break;
+            //        case Season.Summer:
+            //            Console.WriteLine("Summer: June to August");
+            //            break;
+            //        case Season.Autumn:
+            //            Console.WriteLine("Autumn: September to November");
+            //            break;
+            //        case Season.Winter:
+            //            Console.WriteLine("Winter: December to February");
+            //            break;
+            //        default:
+            //            Console.WriteLine("Invalid season entered.");
+            //            break;
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Invalid season entered.");
+            //}
+            #endregion
+            #region Q4
+            Console.Write("Enter a color (Red, Green, Blue): ");
+            string input = Console.ReadLine();
+
+            
+            if (Enum.TryParse(input, true, out Colors color))
             {
-                Console.WriteLine(day);
+                
+                Console.WriteLine($"{color} is a primary color.");
             }
+            else
+            {
+                
+                Console.WriteLine($"{input} is not a primary color.");
+            }
+            #endregion
         }
     }
 }
